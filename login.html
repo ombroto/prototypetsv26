@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Masuk — Tracer Vokasi 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/app-paE_Momn.css" />
+    <script defer src="assets/app-BUM8Shmd.js"></script>
+</head>
+<body>
+    
+
+<div class="tv-gov-bar">
+    <div class="tv-container" style="display:flex;justify-content:space-between;align-items:center">
+        <div style="display:flex;align-items:center;gap:8px">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#E1A92E"><path d="M12 2L3 7v10l9 5 9-5V7l-9-5z"/></svg>
+            <span>Laman Resmi Kementerian Pendidikan Dasar dan Menengah Republik Indonesia</span>
+        </div>
+        <div class="tv-gov-bar__links" style="display:flex;gap:16px">
+            <a href="#" style="color:var(--tv-navy-200);text-decoration:none">kemendikdasmen.go.id</a>
+            <span style="color:var(--tv-gold-300)">EN · ID</span>
+        </div>
+    </div>
+</div>
+
+
+<div class="tv-login-wrap" style="min-height:calc(100vh - 32px);background:var(--tv-canvas);padding:60px 24px;display:grid;place-items:center"
+     x-data="loginForm()">
+    <div class="tv-login-card" style="display:grid;max-width:1080px;width:100%;border-radius:24px;overflow:hidden;box-shadow:0 32px 80px rgba(11,30,63,0.18);background:white">
+
+        
+        <div class="tv-login-brand" :style="{ background: `linear-gradient(160deg,${palette[role]} 0%,var(--tv-navy-900) 100%)` }"
+             style="padding:48px;color:white;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between">
+            
+
+            
+            <div style="position:relative;display:flex;align-items:center;gap:12px">
+                <img src="images/logo-smk.svg" style="height:44px;width:auto" alt="SMK">
+            </div>
+
+            <div style="position:relative">
+                <div class="tv-eyebrow" style="color:var(--tv-gold-300);margin:14px 0">MULAI SURVEY</div>
+                <h2 style="font-size:38px;font-weight:800;letter-spacing:-0.025em;line-height:1.08;margin:0">
+                    Selamat datang<br>kembali, pejuang vokasi.
+                </h2>
+                <p style="margin-top:16px;color:rgba(255,255,255,0.7);line-height:1.55;font-size:15px">
+                    Pilih peran Anda, lalu masuk untuk memulai atau melanjutkan pengisian tracer study tahun 2026.
+                </p>
+                <div style="margin-top:32px;padding:20px;background:rgba(255,255,255,0.06);border-radius:12px;border:1px solid rgba(255,255,255,0.1)">
+                    <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L4 6v6c0 5 3 9 8 10 5-1 8-5 8-10V6z"/></svg>
+                        <span style="font-size:13px;font-weight:700;color:var(--tv-gold-300)">Data Anda aman</span>
+                    </div>
+                    <div style="font-size:13px;color:rgba(255,255,255,0.7);line-height:1.55">
+                        Seluruh jawaban tidak dipublikasikan & dilindungi sesuai UU Perlindungan Data.
+                    </div>
+                </div>
+            </div>
+
+            <div style="position:relative;font-size:12px;color:rgba(255,255,255,0.5);margin-top:14px">
+                © Direktorat SMK · Kemendikdasmen RI
+            </div>
+        </div>
+
+        
+        <div class="tv-login-form" style="padding:48px">
+            <a href="index.html" class="tv-btn tv-btn--ghost tv-btn--sm" style="margin-bottom:24px;display:inline-flex">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>&nbsp;Kembali ke beranda
+            </a>
+            <div style="font-size:12px;font-weight:700;color:var(--tv-navy-700);letter-spacing:0.12em;text-transform:uppercase">LANGKAH 1 dari 2</div>
+            <h3 style="font-size:28px;font-weight:800;letter-spacing:-0.02em;color:var(--tv-navy-900);margin:6px 0 8px">Pilih peran &amp; masuk</h3>
+            <p style="font-size:14px;color:var(--tv-ink-600);margin:0 0 24px">Tiap peran punya metode login yang berbeda.</p>
+
+            
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:6px;background:var(--tv-ink-50);border-radius:12px;margin-bottom:28px">
+                                <button type="button" @click="setRole('alumni')"
+                        class="tv-login-tab"
+                        :class="role === 'alumni' ? 'tv-login-tab--active' : ''">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v2"/></svg> Alumni
+                </button>
+                                <button type="button" @click="setRole('sekolah')"
+                        class="tv-login-tab"
+                        :class="role === 'sekolah' ? 'tv-login-tab--active' : ''">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg> Satuan Pendidikan
+                </button>
+                                <button type="button" @click="setRole('dudi')"
+                        class="tv-login-tab"
+                        :class="role === 'dudi' ? 'tv-login-tab--active' : ''">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg> DUDI
+                </button>
+                            </div>
+
+            <form @submit.prevent="handleLogin">
+                
+                <div x-show="role === 'alumni'" x-cloak>
+                    <div style="display:flex;gap:8px;margin-bottom:16px">
+                                                <button type="button" @click="setIdentity('nisn')"
+                                class="tv-login-id-btn"
+                                :class="identity === 'nisn' ? 'tv-login-id-btn--active' : ''">
+                            Login pakai NISN
+                        </button>
+                                                <button type="button" @click="setIdentity('nik')"
+                                class="tv-login-id-btn"
+                                :class="identity === 'nik' ? 'tv-login-id-btn--active' : ''">
+                            Login pakai NIK
+                        </button>
+                                            </div>
+                    <label class="tv-label">
+                        <span x-text="identity.toUpperCase()"></span>
+                        <span style="color:var(--tv-ink-400);font-weight:400" x-text="`(${identity === 'nisn' ? '10 digit' : '16 digit'})`"></span>
+                    </label>
+                    <input class="tv-input" type="text" inputmode="numeric" x-model="val"
+                           :maxlength="identity === 'nisn' ? 10 : 16"
+                           :placeholder="identity === 'nisn' ? '0061234567' : '3201234567890001'"
+                           @input="val = val.replace(/\D/g, ''); err = ''" />
+                    <div style="margin-top:10px;padding:12px;background:var(--tv-info-bg);border-radius:8px;font-size:12px;color:var(--tv-navy-800);display:flex;gap:8px;align-items:flex-start">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                        <span>Hanya untuk lulusan tahun 2024.
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div x-show="role === 'sekolah'" x-cloak>
+                    <label class="tv-label">Surel DAPODIK</label>
+                    <input class="tv-input" type="email" x-model="val" placeholder="operator@smkn1jakarta.sch.id" @input="err=''" />
+                    <label class="tv-label" style="margin-top:14px">NPSN</label>
+                    <input class="tv-input" type="numeric" x-model="val" placeholder="12345678" @input="err=''" />
+                    <div style="margin-top:10px;font-size:12px;color:var(--tv-ink-500)">Gunakan alamat surel yang terdaftar di DAPODIK</div>
+                </div>
+
+                
+                <div x-show="role === 'dudi' && dudiView === 'login'" x-cloak>
+                    <label class="tv-label">Surel perusahaan</label>
+                    <input class="tv-input" type="email" x-model="val" placeholder="hr@perusahaan.co.id" @input="err=''" />
+                    <label class="tv-label" style="margin-top:14px">Password</label>
+                    <input class="tv-input" type="password" x-model="pass" placeholder="••••••••" @input="err=''" />
+                    <div style="margin-top:10px;font-size:12px;color:var(--tv-ink-500)">
+                        Belum punya akun? <a href="#" @click.prevent="dudiView='register';err=''" style="color:var(--tv-orange-700);font-weight:600">Daftarkan DUDI Anda →</a>
+                    </div>
+                </div>
+
+                
+                <div x-show="role === 'dudi' && dudiView === 'register'" x-cloak>
+                    <label class="tv-label">Nama lengkap</label>
+                    <input class="tv-input" type="text" x-model="name" placeholder="PT Maju Bersama" @input="err=''" />
+                    <label class="tv-label" style="margin-top:14px">Surel aktif</label>
+                    <input class="tv-input" type="email" x-model="val" placeholder="hr@perusahaan.co.id" @input="err=''" />
+                    <label class="tv-label" style="margin-top:14px">Password</label>
+                    <input class="tv-input" type="password" x-model="pass" placeholder="••••••••" @input="err=''" />
+                    <label class="tv-label" style="margin-top:14px">Ulangi Password</label>
+                    <input class="tv-input" type="password" x-model="confirmPass" placeholder="••••••••" @input="err=''" />
+                    <div style="margin-top:10px;font-size:12px;color:var(--tv-ink-500)">
+                        Sudah memiliki akun? <a href="#" @click.prevent="dudiView='login';err=''" style="color:var(--tv-orange-700);font-weight:600">Masuk di sini →</a>
+                    </div>
+                </div>
+
+                
+                <div x-show="err" x-cloak style="margin-top:14px;padding:12px;background:var(--tv-error-bg);border-radius:8px;font-size:13px;color:var(--tv-error);display:flex;gap:8px;align-items:center">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg> <span x-text="err"></span>
+                </div>
+
+                <button type="submit" class="tv-btn tv-btn--primary tv-btn--lg" style="width:100%;margin-top:24px">
+                    <span x-show="!(role === 'dudi' && dudiView === 'register')">Masuk &amp; Mulai Survey</span>
+                    <span x-show="role === 'dudi' && dudiView === 'register'" x-cloak>Daftar</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                </button>
+                <div style="margin-top:16px;text-align:center;font-size:13px;color:var(--tv-ink-500)">
+                    Butuh bantuan? <a href="https://api.whatsapp.com/send?phone=628118649444&text=Halo%20layanan%20informasi%20Direktorat%20SMK" style="color:var(--tv-navy-700);font-weight:600">Hubungi WA Direktorat SMK</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+function loginForm() {
+    const params = new URLSearchParams(window.location.search);
+    return {
+        role: params.get('role') || 'alumni',
+        identity: 'nisn',
+        val: '', pass: '', confirmPass: '', name: '', err: '',
+        dudiView: 'login',
+        palette: {
+            alumni:  'var(--tv-navy-700)',
+            sekolah: 'var(--tv-teal-700)',
+            dudi:    'var(--tv-orange-700)',
+        },
+        setRole(r) { this.role = r; this.err = ''; this.val = ''; this.pass = ''; this.confirmPass = ''; this.name = ''; this.dudiView = 'login'; },
+        setIdentity(id) { this.identity = id; this.err = ''; this.val = ''; },
+        handleLogin() {
+            if (this.role === 'alumni') {
+                const len = this.identity === 'nisn' ? 10 : 16;
+                if (this.val.length !== len || !/^\d+$/.test(this.val)) {
+                    this.err = `${this.identity.toUpperCase()} harus ${len} digit angka.`;
+                    return;
+                }
+            } else if (this.role === 'dudi' && this.dudiView === 'register') {
+                if (!this.name.trim()) { this.err = 'Nama lengkap wajib diisi.'; return; }
+                if (this.val.length < 4) { this.err = 'Mohon masukkan surel yang valid.'; return; }
+                if (this.pass.length < 8) { this.err = 'Password minimal 8 karakter.'; return; }
+                if (this.pass !== this.confirmPass) { this.err = 'Password dan ulangi password tidak cocok.'; return; }
+            } else if (this.val.length < 4 || this.pass.length < 4) {
+                this.err = 'Mohon lengkapi data Anda.';
+                return;
+            }
+            alert('Login berhasil! (Demo — integrasi backend belum tersedia)');
+        },
+    };
+}
+</script>
+
+</body>
+</html>
