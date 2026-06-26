@@ -7,9 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/app-paE_Momn.css" />
-    <script defer src="assets/app-BUM8Shmd.js"></script>
-</head>
+    <link rel="stylesheet" href="assets/app-DkjnZOa_.css" />
+    <script defer src="assets/app-BUM8Shmd.js"></script></head>
 <body>
     
 
@@ -32,7 +31,7 @@
     <div class="tv-login-card" style="display:grid;max-width:1080px;width:100%;border-radius:24px;overflow:hidden;box-shadow:0 32px 80px rgba(11,30,63,0.18);background:white">
 
         
-        <div class="tv-login-brand" :style="{ background: `linear-gradient(160deg,${palette[role]} 0%,var(--tv-navy-900) 100%)` }"
+        <div class="tv-login-brand" :style="{ background: `linear-gradient(160deg,${palette[role]} 0%,var(--tv-navy-500) 100%)` }"
              style="padding:48px;color:white;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between">
             
 
@@ -44,7 +43,7 @@
             <div style="position:relative">
                 <div class="tv-eyebrow" style="color:var(--tv-gold-300);margin:14px 0">MULAI SURVEY</div>
                 <h2 style="font-size:38px;font-weight:800;letter-spacing:-0.025em;line-height:1.08;margin:0">
-                    Selamat datang<br>kembali, pejuang vokasi.
+                    Selamat datang<br>kembali, pejuang pendidikan kejuruan.
                 </h2>
                 <p style="margin-top:16px;color:rgba(255,255,255,0.7);line-height:1.55;font-size:15px">
                     Pilih peran Anda, lalu masuk untuk memulai atau melanjutkan pengisian tracer study tahun 2026.
@@ -84,12 +83,12 @@
                                 <button type="button" @click="setRole('sekolah')"
                         class="tv-login-tab"
                         :class="role === 'sekolah' ? 'tv-login-tab--active' : ''">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg> Satuan Pendidikan
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg> SMK
                 </button>
                                 <button type="button" @click="setRole('dudi')"
                         class="tv-login-tab"
                         :class="role === 'dudi' ? 'tv-login-tab--active' : ''">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg> DUDI
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg> Dunia Kerja
                 </button>
                             </div>
 
@@ -139,7 +138,7 @@
                     <label class="tv-label" style="margin-top:14px">Password</label>
                     <input class="tv-input" type="password" x-model="pass" placeholder="••••••••" @input="err=''" />
                     <div style="margin-top:10px;font-size:12px;color:var(--tv-ink-500)">
-                        Belum punya akun? <a href="#" @click.prevent="dudiView='register';err=''" style="color:var(--tv-orange-700);font-weight:600">Daftarkan DUDI Anda →</a>
+                        Belum punya akun? <a href="#" @click.prevent="dudiView='register';err=''" style="color:var(--tv-indigo-700);font-weight:600">Daftarkan DUDI Anda →</a>
                     </div>
                 </div>
 
@@ -154,7 +153,7 @@
                     <label class="tv-label" style="margin-top:14px">Ulangi Password</label>
                     <input class="tv-input" type="password" x-model="confirmPass" placeholder="••••••••" @input="err=''" />
                     <div style="margin-top:10px;font-size:12px;color:var(--tv-ink-500)">
-                        Sudah memiliki akun? <a href="#" @click.prevent="dudiView='login';err=''" style="color:var(--tv-orange-700);font-weight:600">Masuk di sini →</a>
+                        Sudah memiliki akun? <a href="#" @click.prevent="dudiView='login';err=''" style="color:var(--tv-indigo-700);font-weight:600">Masuk di sini →</a>
                     </div>
                 </div>
 
@@ -185,9 +184,9 @@ function loginForm() {
         val: '', pass: '', confirmPass: '', name: '', err: '',
         dudiView: 'login',
         palette: {
-            alumni:  'var(--tv-navy-700)',
-            sekolah: 'var(--tv-teal-700)',
-            dudi:    'var(--tv-orange-700)',
+            alumni:  'var(--tv-navy-900)',
+            sekolah: 'var(--tv-skyblue-700)',
+            dudi:    'var(--tv-indigo-700)',
         },
         setRole(r) { this.role = r; this.err = ''; this.val = ''; this.pass = ''; this.confirmPass = ''; this.name = ''; this.dudiView = 'login'; },
         setIdentity(id) { this.identity = id; this.err = ''; this.val = ''; },
